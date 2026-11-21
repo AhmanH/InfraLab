@@ -1,0 +1,168 @@
+{
+  "id": "2026-11-13",
+  "collectedAt": "2026-11-13T15:00:00Z",
+  "label": "Week ending 13 Nov",
+  "sample": true,
+  "environment": {
+    "name": "InfraLab",
+    "domain": "lab.local"
+  },
+  "directory": {
+    "domain": "lab.local",
+    "collectedFrom": "DC01",
+    "staleAfterDays": 90,
+    "users": {
+      "total": 8,
+      "enabled": 7,
+      "disabled": 1,
+      "lockedOut": 0,
+      "stale": 1
+    },
+    "computers": {
+      "total": 3,
+      "stale": 0
+    },
+    "groups": [
+      {
+        "name": "Domain Admins",
+        "memberCount": 2,
+        "members": [
+          { "sam": "Administrator", "enabled": true },
+          { "sam": "lab-admin", "enabled": true }
+        ]
+      }
+    ]
+  },
+  "hosts": [
+    {
+      "id": "dc01",
+      "hostname": "DC01",
+      "role": "domain-controller",
+      "os": {
+        "family": "windows",
+        "name": "Windows Server 2022",
+        "version": "21H2",
+        "build": "20348.4529"
+      },
+      "uptimeSeconds": 432000,
+      "cpu": {
+        "model": "Virtual CPU",
+        "cores": 4,
+        "usagePercent": 9
+      },
+      "memory": {
+        "totalBytes": 8589934592,
+        "usedBytes": 3001483107
+      },
+      "disks": [
+        {
+          "mount": "C:",
+          "totalBytes": 85899345920,
+          "freeBytes": 51539607552
+        }
+      ],
+      "network": [
+        {
+          "name": "Ethernet",
+          "ipv4": ["10.10.10.10"],
+          "macAddress": ["00:1A:2B:3C:4D:5E"]
+        }
+      ],
+      "updates": { "pending": 0 },
+      "windows": {
+        "services": [
+          { "name": "NTDS", "displayName": "Active Directory Domain Services", "status": "running" },
+          { "name": "DNS", "displayName": "DNS Server", "status": "running" },
+          { "name": "Netlogon", "displayName": "Netlogon", "status": "running" },
+          { "name": "KDC", "displayName": "Kerberos Key Distribution Center", "status": "running" }
+        ],
+        "time": {
+          "source": "time.windows.com",
+          "offsetSeconds": 0.4
+        }
+      }
+    },
+    {
+      "id": "win11-01",
+      "hostname": "WIN11-01",
+      "role": "windows-client",
+      "os": {
+        "family": "windows",
+        "name": "Windows 11 Pro",
+        "version": "24H2",
+        "build": "26100.7019"
+      },
+      "uptimeSeconds": 259200,
+      "cpu": {
+        "model": "Virtual CPU",
+        "cores": 4,
+        "usagePercent": 18
+      },
+      "memory": {
+        "totalBytes": 8589934592,
+        "usedBytes": 4724464026
+      },
+      "disks": [
+        {
+          "mount": "C:",
+          "totalBytes": 68719476736,
+          "freeBytes": 42949672960
+        }
+      ],
+      "network": [
+        {
+          "name": "Ethernet",
+          "ipv4": ["10.10.10.25"],
+          "macAddress": ["00:1A:2B:3C:4D:5E"]
+        }
+      ],
+      "updates": { "pending": 0 },
+      "windows": {
+        "domainJoined": true,
+        "secureChannel": true,
+        "dnsServers": ["10.10.10.10"]
+      }
+    },
+    {
+      "id": "ubuntu-01",
+      "hostname": "ubuntu-01",
+      "role": "linux-server",
+      "os": {
+        "family": "linux",
+        "name": "Ubuntu",
+        "version": "24.04.3 LTS"
+      },
+      "uptimeSeconds": 1209600,
+      "cpu": {
+        "model": "Virtual CPU",
+        "cores": 2,
+        "usagePercent": 6
+      },
+      "memory": {
+        "totalBytes": 4294967296,
+        "usedBytes": 1288490189
+      },
+      "disks": [
+        {
+          "mount": "/",
+          "totalBytes": 34359738368,
+          "freeBytes": 21474836480
+        }
+      ],
+      "network": [
+        {
+          "name": "eth0",
+          "ipv4": ["10.10.10.40"],
+          "macAddress": ["00:1A:2B:3C:4D:5E"]
+        }
+      ],
+      "updates": { "pending": 0 },
+      "linux": {
+        "failedUnits": [],
+        "listening": [
+          { "port": 22, "process": "sshd" }
+        ]
+      }
+    }
+  ]
+}

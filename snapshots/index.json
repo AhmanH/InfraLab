@@ -1,0 +1,16 @@
+{
+  "snapshots": [
+    {
+      "id": "2026-11-13",
+      "label": "Week ending 13 Nov",
+      "collectedAt": "2026-11-13T15:00:00Z",
+      "sample": true
+    },
+    {
+      "id": "2026-11-20",
+      "label": "Week ending 20 Nov",
+      "collectedAt": "2026-11-20T15:00:00Z",
+      "sample": true
+    }
+  ]
+}
